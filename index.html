@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <section class="min-h-screen bg-sky-300 flex items-center justify-center">
+      <h class="text-xl font-semibold">Role para baixo</h>
+    </section>
+    <div class="min-h-screen flex">
+      <!-- Coluna do Menu -->
+      <div class="w-1/4 p-4 bg-gray-100">
+        <h2 class="text-xl font-semibold mb-4">Filtrar Tarefas</h2>
+        <ul class="space-y-2">
+          <li>
+            <span class="font-semibold">Usuário Id</span>
+            <div class="flex items-center justify-between">
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="userId"
+                  value="1"
+                  class="form-radio"
+                />
+                <span>Usuário 1</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="userId"
+                  value="2"
+                  class="form-radio"
+                />
+                <span>Usuário 2</span>
+              </label>
+            </div>
+          </li>
+          <li>
+            <span class="font-semibold">Status</span>
+            <div class="flex items-center justify-between">
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="completed"
+                  value="true"
+                  class="form-radio"
+                />
+                <span>Completo</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="completed"
+                  value="false"
+                  class="form-radio"
+                />
+                <span>Incompleto</span>
+              </label>
+            </div>
+          </li>
+          <li>
+            <button id="clear" class="border-0 bg-cyan-600 p-2">Limpar Filtro</button>
+          </li>
+        </ul>
+      </div>
+      <div class="w-3/4 p-4">
+        <div class="grid grid-cols-3 gap-4" id="items">
+        </div>
+      </div>
+    </div>
+
+    <script src="src/controller.js" type="module"></script>
+  </body>
+</html>
